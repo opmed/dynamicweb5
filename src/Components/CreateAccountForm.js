@@ -1,11 +1,17 @@
 import React from 'react';
 
-function CreateAccount() {
+	function CreateAccountForm({CreateAccountFunction}) {
 	return (
 	  <div>
-		  <h1>CreateAccountForm</h1>
+	     <form className-"SignupForm" onSubmit={(e) => CreateAccountFunction(e)}>
+	     <label htmlFor="createEmail">Email</label>
+	     <input type="email" name="createEmail" />
+	     <label htmlFor="createPassword">Password</label>
+	     <input type="password" name="createPassword" />
+	     <button>Create Account</button>
+		 </form>
 	  </div>
 	);
 }
 
-export default CreateAccount;
+export default CreateAccountForm;
